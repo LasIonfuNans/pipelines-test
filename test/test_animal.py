@@ -1,7 +1,7 @@
 from pkg import __version__
 import unittest as ut
 import pytest
-from pkg.te import Animal, Dog, Human
+from package.animal import Animal, Dog, Human
 
 
 class NgTest01(Animal):
