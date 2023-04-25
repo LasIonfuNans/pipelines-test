@@ -7,8 +7,7 @@ jobs:
 - job: Linux
 
   pool:
-    # vmImage: 'Ubuntu 16.04'
-    vmImage: 'ubuntu-latest'
+    vmImage: 'ubuntu-22.04'
 
   strategy:
     matrix:
@@ -35,7 +34,7 @@ jobs:
 - job: Windows
 
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-2022'
 
   strategy:
     matrix:
