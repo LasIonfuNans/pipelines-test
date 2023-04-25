@@ -1,4 +1,4 @@
-from pkg import __version__
+from package import __version__
 import unittest as ut
 import pytest
 from package.animal import Animal, Dog, Human
