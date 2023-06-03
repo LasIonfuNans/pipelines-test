@@ -62,6 +62,40 @@ class Dog(Animal):
         return ret_str
 
 
+class Cat(Animal):
+
+    def __init__(self, name: str, old: int):
+        self.name = name
+        self.old = old
+        self.animal_name = "猫"
+        self.animal_cry = "ニャアニャア"
+
+    def cry(self) -> str:
+        """
+        鳴き声の説明
+
+        猫がどのように鳴くかを表示する
+        """
+        ret_str = f"{self.animal_name}は{self.animal_cry}と吠える"
+        print(ret_str)
+        return ret_str
+
+    def age_conversion(self) -> str:
+        """
+        年の説明
+
+        人間の年齢に換算した際に、猫が何歳であるかを表示する
+        """
+
+        tmp_age = 20
+        if self.old >= 2:
+            tmp_age += 4 * (self.old - 2)
+
+        ret_str = f"{self.name}は人間の年齢に換算すると{tmp_age}歳になります"
+        print(ret_str)
+        return ret_str
+
+
 class Human(Animal):
     """
     人間クラス
