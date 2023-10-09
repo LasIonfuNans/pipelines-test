@@ -28,20 +28,24 @@ class NgTest02(Animal):
 
 class SpTest(ut.TestCase):
 
+    @staticmethoed
     def test_version(self):
         assert __version__ == '0.1.0'
 
+    @staticmethoed
     def test_dog(self):
         kaede_dog = Dog(name="楓", old=2)
         kaede_dog.age_conversion()
         kaede_dog.cry()
 
+    @staticmethoed
     def test_human(self):
         aoi_human = Human(name="時巻あおい", old=18)
         aoi_human.age_conversion()
         aoi_human.cry()
         aoi_human.print_test("test", "message")
 
+    @staticmethoed
     def test_ng_age(self):
         # TypeErrorを検知
         with pytest.raises(TypeError) as e:
@@ -50,6 +54,7 @@ class SpTest(ut.TestCase):
         # エラーメッセージを検証
         assert str(e.value) == "Can't instantiate abstract class NgTest01 with abstract method age_conversion"
 
+    @staticmethoed
     def test_ng_cry(self):
         # TypeErrorを検知
         with pytest.raises(TypeError) as e:
@@ -57,4 +62,3 @@ class SpTest(ut.TestCase):
 
         # エラーメッセージを検証
         assert str(e.value) == "Can't instantiate abstract class NgTest02 with abstract method cry"
-

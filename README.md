@@ -1,2 +1,2 @@
 # pipelines-test
-azure pipeline
+azure pipelineとの連携のために利用
